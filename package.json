@@ -1,6 +1,6 @@
 {
 	"name": "geometry-vector2d",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Vector",
 	"main": "index.js",
 	"scripts": {
@@ -12,7 +12,11 @@
 	},
 	"author": "dmytro-lymarenko",
 	"devDependencies": {
-		"mocha": "2.3.4"
+		"mocha": "2.3.4",
+		"jsdom": "7.2.1",
+		"proxyquire": "1.7.3",
+		"sinon": "1.17.2",
+		"should": "8.0.2"
 	},
 	"dependencies": {
 	}
