@@ -110,4 +110,29 @@ describe('Vector2d', () => {
 			});
 		});
 	});
+	describe('.equals', () => {
+		it('should return true if vectors are equal', () => {
+			let first, second;
+
+			first = Vector2d.getZero();
+			second = Vector2d.getZero();
+			Vector2d.equals(first, second).should.be.true();
+
+			first = Vector2d.getVectorXY(4, 7);
+			second = Vector2d.getVectorXY(4, 7);
+			Vector2d.equals(first, second).should.be.true();
+		});
+
+		it('should return false if vectors are not equal', () => {
+			let first, second;
+			
+			first = Vector2d.getZero();
+			second = Vector2d.getVectorXY(4, 7);
+			Vector2d.equals(first, second).should.be.false();
+
+			first = Vector2d.getVectorXY(4, 7);
+			second = Vector2d.getVectorXY(4, 3);
+			Vector2d.equals(first, second).should.be.false();
+		});
+	});
 });
