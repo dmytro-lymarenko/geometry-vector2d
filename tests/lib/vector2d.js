@@ -135,4 +135,25 @@ describe('Vector2d', () => {
 			Vector2d.equals(first, second).should.be.false();
 		});
 	});
+	describe('.isVector2d', () => {
+		it('should return true if obj is vector', () => {
+			Vector2d.isVector2d({x: 2, y: 7}).should.be.true();
+			Vector2d.isVector2d({x: 2, y: NaN}).should.be.true();
+			Vector2d.isVector2d({x: NaN, y: 7}).should.be.true();
+			Vector2d.isVector2d({x: NaN, y: NaN}).should.be.true();
+		});
+
+		it('should return false if obj isn\'t vector', () => {
+			Vector2d.isVector2d().should.be.false();
+			Vector2d.isVector2d(0).should.be.false();
+			Vector2d.isVector2d({}).should.be.false();
+			Vector2d.isVector2d({x: 4}).should.be.false();
+			Vector2d.isVector2d({y: 6}).should.be.false();
+			Vector2d.isVector2d({x: 4, y: 'srg'}).should.be.false();
+			Vector2d.isVector2d({x: 'er', y: 4}).should.be.false();
+			Vector2d.isVector2d({x: () => {}, y: 5}).should.be.false();
+			Vector2d.isVector2d(() => {}).should.be.false();
+			Vector2d.isVector2d('').should.be.false();
+		});
+	});
 });
