@@ -4,20 +4,12 @@
 	"description": "Vector",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha --require tests/setup.js --recursive tests"
+		"test": "mocha --recursive tests"
 	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/dmytro-lymarenko/geometry-vector2d.git"
 	},
-	"author": "dmytro-lymarenko",
-	"devDependencies": {
-		"mocha": "2.3.4",
-		"jsdom": "7.2.1",
-		"proxyquire": "1.7.3",
-		"sinon": "1.17.2",
-		"should": "8.0.2"
-	},
-	"dependencies": {
-	}
+	"author": "dmytro.lymarenko",
+	"license": "ISC"
 }
